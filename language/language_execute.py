@@ -3,11 +3,12 @@
 
 import sys
 from fann2 import libfann
+from frequency import count_frequency
 
 if __name__ == '__main__':
 
-    buf = ''
-    for line in sys.stdin:
-        buf += line
+    frequencies = count_frequency(sys.stdin)
 
-    print buf
+    ann = libfann.neural_net()
+    ann.create_from_file('language.net')
+    print ann.run(frequencies)
