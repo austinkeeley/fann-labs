@@ -1,5 +1,5 @@
 # FANN Labs
-Some sample FANN projects writen using the Python bindings.
+Some artificial neural network projects written using the FANN Python bindings.
 
 ## Instructions
 
