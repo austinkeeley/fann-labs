@@ -73,6 +73,15 @@ Send character frequencies through the ANN by specifying text on stdin. The firs
 
 Note that this ANN only uses the 26 character Latin alphabet and ignores any other characters or punctuation.
 
+### Tic-Tac-Toe
+Teach a computer how to play a game of Tic-Tac-Toe. For this one, The inputs are 9 integers which represent the
+squares on the grid with the first integer in the upper left corner and the last in the bottom right. A `1` represents
+your own mark, a `-1` represents the opponents mark and a `0` represents an open square. The outputs are a 9 numbers between `-1` and `1` where
+negative numbers are illegal moves. The highest number is the most optimal
+move.
+
+I manually typed out 30 game states and their optimal next move for training. It can't play a perfect game with so few game states to learn from. I'll probably revisit this later.
+
 ### Notes
 The `fann2` Python bindings are not documented because they are really just a
 swig port of the C++ bindings.  See [the the reference manual page](http://leenissen.dk/fann/html/files/fann_cpp-h.html) for the API.
